@@ -1,4 +1,17 @@
 # MySQL MCP Server
+#
+## High-Level Architecture (Simple)
+
+```mermaid
+flowchart TD
+    Client[MCP Client]
+    Server[MCP Server]
+    DB[(MySQL Database)]
+    Client -- API Request --> Server
+    Server -- SQL Query --> DB
+    DB -- Query Result --> Server
+    Server -- API Response --> Client
+```
 
 A Model Context Protocol (MCP) server that enables AI agents to safely interact with MySQL databases through a standardized interface.
 
